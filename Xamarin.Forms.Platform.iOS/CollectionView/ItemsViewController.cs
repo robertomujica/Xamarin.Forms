@@ -216,8 +216,8 @@ namespace Xamarin.Forms.Platform.iOS
 			if (ItemsView.ItemTemplate != null)
 			{
 				return ItemsViewLayout.ScrollDirection == UICollectionViewScrollDirection.Horizontal
-					? HorizontalTemplatedCell.ReuseId
-					: VerticalTemplatedCell.ReuseId;
+					? HorizontalCell.ReuseId
+					: VerticalCell.ReuseId;
 			}
 
 			return ItemsViewLayout.ScrollDirection == UICollectionViewScrollDirection.Horizontal
@@ -257,9 +257,9 @@ namespace Xamarin.Forms.Platform.iOS
 		{
 			CollectionView.RegisterClassForCell(typeof(HorizontalDefaultCell), HorizontalDefaultCell.ReuseId);
 			CollectionView.RegisterClassForCell(typeof(VerticalDefaultCell), VerticalDefaultCell.ReuseId);
-			CollectionView.RegisterClassForCell(typeof(HorizontalTemplatedCell),
-				HorizontalTemplatedCell.ReuseId);
-			CollectionView.RegisterClassForCell(typeof(VerticalTemplatedCell), VerticalTemplatedCell.ReuseId);
+			CollectionView.RegisterClassForCell(typeof(HorizontalCell),
+				HorizontalCell.ReuseId);
+			CollectionView.RegisterClassForCell(typeof(VerticalCell), VerticalCell.ReuseId);
 		}
 
 		void UpdateHeaderFooterPosition()

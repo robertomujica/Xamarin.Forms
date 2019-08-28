@@ -48,10 +48,10 @@ namespace Xamarin.Forms.Platform.iOS
 
 		void RegisterSupplementaryViews(UICollectionElementKindSection kind)
 		{
-			CollectionView.RegisterClassForSupplementaryView(typeof(HorizontalTemplatedSupplementalView),
-				kind, HorizontalTemplatedSupplementalView.ReuseId);
-			CollectionView.RegisterClassForSupplementaryView(typeof(VerticalTemplatedSupplementalView),
-				kind, VerticalTemplatedSupplementalView.ReuseId);
+			CollectionView.RegisterClassForSupplementaryView(typeof(HorizontalSupplementaryView),
+				kind, HorizontalSupplementaryView.ReuseId);
+			CollectionView.RegisterClassForSupplementaryView(typeof(VerticalSupplementaryView),
+				kind, VerticalSupplementaryView.ReuseId);
 			CollectionView.RegisterClassForSupplementaryView(typeof(HorizontalDefaultSupplementalView),
 				kind, HorizontalDefaultSupplementalView.ReuseId);
 			CollectionView.RegisterClassForSupplementaryView(typeof(VerticalDefaultSupplementalView),
@@ -125,8 +125,8 @@ namespace Xamarin.Forms.Platform.iOS
 			}
 
 			return ItemsViewLayout.ScrollDirection == UICollectionViewScrollDirection.Horizontal
-				? HorizontalTemplatedSupplementalView.ReuseId
-				: VerticalTemplatedSupplementalView.ReuseId;
+				? HorizontalSupplementaryView.ReuseId
+				: VerticalSupplementaryView.ReuseId;
 		}
 
 		internal CGSize GetReferenceSizeForHeader(UICollectionView collectionView, UICollectionViewLayout layout, nint section)
