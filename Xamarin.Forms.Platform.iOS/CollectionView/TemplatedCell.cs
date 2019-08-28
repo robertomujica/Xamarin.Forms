@@ -91,7 +91,7 @@ namespace Xamarin.Forms.Platform.iOS
 
 			if (template != _currentTemplate)
 			{
-				// And make the Element is a "child" of the ItemsView
+				// And make the Element a "child" of the ItemsView
 				// We deliberately do this _after_ setting the binding context for the new element;
 				// if we do it before, the element briefly inherits the ItemsView's bindingcontext and we 
 				// emit a bunch of needless binding errors
